@@ -1,0 +1,20 @@
+---
+- name: Launch instance
+  ec2:
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+    id: "{{ aws_instance_id }}"
+    key_name: aws-west-demo-bhinson
+    instance_type: "{{ aws_instance_type }}"
+    image: ami-0e4046812729f6954
+    wait: no
+    group: west-sg-bhinson
+    count: 1
+    vpc_subnet_id: subnet-1738205c
+    assign_public_ip: yes
+    region: "{{ aws_region }}"
+    instance_tags:
+      Contact: bhinson@redhat.com
+      DeleteBy: Never
+      AlwaysUp: False
+      Name: "{{ aws_instance_id }}"

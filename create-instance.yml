@@ -1,0 +1,8 @@
+---
+
+- name: Create and Launch Instance on AWS
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: create-instance
+
