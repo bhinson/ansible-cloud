@@ -4,7 +4,7 @@
     aws_access_key: "{{ aws_access_key }}"
     aws_secret_key: "{{ aws_secret_key }}"
     id: "{{ aws_instance_id }}"
-    key_name: aws-west-demo-bhinson
+    key_name: "{{ aws_keypair }}"
     instance_type: "{{ aws_instance_type }}"
     image: ami-0e4046812729f6954
     wait: no
