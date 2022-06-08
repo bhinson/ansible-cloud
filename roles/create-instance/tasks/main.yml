@@ -1,16 +1,16 @@
 ---
 - name: Launch instance
-  ec2:
+  amazon.aws.ec2:
     aws_access_key: "{{ aws_access_key }}"
     aws_secret_key: "{{ aws_secret_key }}"
     id: "{{ aws_instance_id }}"
     key_name: "{{ aws_keypair }}"
     instance_type: "{{ aws_instance_type }}"
-    image: ami-0e4046812729f6954
+    image: "{{ aws_image }}"
     wait: no
-    group: west-sg-bhinson
+    group: "{{ aws_security_group }}"
     count: 1
-    vpc_subnet_id: subnet-1738205c
+    vpc_subnet_id: "{{ aws_subnet }}"
     assign_public_ip: yes
     region: "{{ aws_region }}"
     instance_tags:
