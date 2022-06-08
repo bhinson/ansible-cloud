@@ -16,6 +16,6 @@
       Contact: bhinson@redhat.com
       DeleteBy: Never
       AlwaysUp: False
-      Name: "{{ aws_instance_id }}"
+#      Name: "{{ aws_instance_id }}"
     count: 1
     wait: no
