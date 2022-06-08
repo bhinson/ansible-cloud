@@ -7,7 +7,7 @@
     region: "{{ aws_region }}"
     instance_type: "{{ aws_instance_type }}"
     key_name: "{{ aws_keypair }}"
-    image.id: "{{ aws_image }}"
+    image_id: "{{ aws_image }}"
     security_group: "{{ aws_security_group }}"
     vpc_subnet_id: "{{ aws_subnet }}"
     network:
